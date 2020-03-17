@@ -1,0 +1,40 @@
+12:29:38	 From  Catalina Maliniciu : Eu am o intrebare legata de ex 4 din laborator
+12:29:57	 From  Honorius Galmeanu : Asa
+12:30:11	 From  Catalina Maliniciu : Nu vad de ce ar trebui sa folosim functia zip
+12:30:30	 From  Catalina Maliniciu : Daca e o suma, nu am putea sa calculam suma valorilo celor doua functii
+12:30:43	 From  Catalina Maliniciu : apelate pentru pmf1 si pmf2?
+12:30:49	 From  Catalina Maliniciu : valorilor*
+12:33:02	 From  Honorius Galmeanu : Pai fie folositi proprietatea, fie constructia cu zip
+12:34:08	 From  Honorius Galmeanu : Vedeti daca se poate in ambele feluri
+12:34:22	 From  Catalina Maliniciu : Am incercat sa fac suma si pe ea sa aplic functia round insa e incorect
+12:35:16	 From  Honorius Galmeanu : Nu e chiar suma, e suma ponderata
+12:35:34	 From  Catalina Maliniciu : Am inteles
+12:35:35	 From  Catalina Maliniciu : Multumesc
+12:36:17	 From  Catalina Maliniciu : Am reusit
+12:36:24	 From  Honorius Galmeanu : Bun!
+13:14:08	 From  Bianca Lixandru : Buna ziua. Imi cer scuze, dar nu inteleg cerinta exercitiul 6. Credeti ca ati putea sa ne explicati un pic?
+13:20:08	 From  Honorius Galmeanu : Da, sa vedem..
+13:21:41	 From  Honorius Galmeanu : Hm, voce?
+13:22:16	 From  Honorius Galmeanu : Vad ca nu ai microfon
+13:22:25	 From  Bianca Lixandru : nu am
+13:22:36	 From  Bianca Lixandru : imi cer scuze
+13:23:31	 From  Honorius Galmeanu : sa incercam asa atunci. Ceea ce e de facut e de extras, din acea populatie (de 6 numere), un sample
+13:24:06	 From  Honorius Galmeanu : sample-ul se alege prin alegerea, in mod aleator, a unei pozitii intre 1 si 6, in mod aleator, chiar daca se  repeta numarul
+13:24:32	 From  Honorius Galmeanu : se face asta de atatea ori cat este lungimea sample-ului
+13:24:51	 From  Bianca Lixandru : hmm.. ok
+13:24:53	 From  Bianca Lixandru : Multumesc
+13:24:55	 From  Honorius Galmeanu : asa se extrage un sample
+13:24:57	 From  Bianca Lixandru : o sa incerc
+13:25:25	 From  Honorius Galmeanu : voi o sa extrageti mai multe sample-uri, ca sa aveti pe ce face distributia
+13:25:35	 From  Honorius Galmeanu : adica pentru fiecare sample ii faceti media
+13:25:50	 From  Honorius Galmeanu : si o sa obtineti atatea medii cate sample-uri ati ales
+13:26:12	 From  Honorius Galmeanu : no, acuma, totalitatea mediilor astea formeaza distributia, si ridicati o histograma pentru ele
+13:26:27	 From  Honorius Galmeanu : e mai clar acum?
+13:27:23	 From  Catalina Maliniciu : si trebuie facut pentru toate lungimile?
+13:28:08	 From  Honorius Galmeanu : da, pentru fiecare lungime de sample (2, 3, 4) faceti cate o histograma de-asta
+13:28:20	 From  Honorius Galmeanu : suna complicat, dar o data ce va prindeti, merge repede
+13:28:22	 From  Catalina Maliniciu : Ok, multumim
+13:28:46	 From  Honorius Galmeanu : chestia e sa intelegeti ce-i cu populatia si cu sample-urile astea
+13:30:08	 From  Bianca Lixandru : Da... este un pic mai clar
+13:37:07	 From  adina : Practic trebuie sa generam populatii cu sample-uri de 2,3,4 valori si sa desenam histograma pentru ele si sa facem media populatiei?
+13:43:29	 From  Honorius Galmeanu : da, cu exceptia ultimei parti: prin procedura asta estimati media populatiei
