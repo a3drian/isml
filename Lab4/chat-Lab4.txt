@@ -1,0 +1,154 @@
+10:27:09	 From  Marcoci Vlad-Andrei : da
+10:27:11	 From  Alexandra : da
+10:27:11	 From  Robert-Adrian Bucur : Da
+10:27:11	 From  Francu Denisa : da
+10:27:12	 From  ANDREI : dada
+10:27:12	 From  Alex : da
+10:27:14	 From  Rusen Razvan : Da
+10:27:20	 From  Florin : du
+10:27:20	 From  Florin : \
+10:34:33	 From  AAgyo : da
+10:34:36	 From  Teodor Mihaescu : nu prea =))
+10:34:37	 From  Elena Denisa Viulet : da
+10:34:46	 From  Florin : nope
+10:35:30	 From  Florin : Sa mai explicate putin ultimul grafic
+10:35:33	 From  Florin : explicati*
+10:35:39	 From  Florin : Celalalt
+10:35:42	 From  Florin : Da
+10:39:35	 From  Teodor Mihaescu : Pai si ce reprezinta aria aceasta, sau la ce avem mai exact nevoie de ea?
+10:42:51	 From  Bianca Lixandru : De ce pentru un tip de quantila ne uitam in dreapta graficului si pentru cealalta in stanga?
+10:42:59	 From  Teodor Mihaescu : In regula, multumesc
+10:43:26	 From  Bianca Lixandru : ok
+10:43:30	 From  Bianca Lixandru : multumesc
+10:52:21	 From  Gabriela Burtan : Da
+10:52:28	 From  Teo Mohaiu : da
+10:52:36	 From  Rusen Razvan : E ok,da
+10:58:48	 From  Bogdan Kocsis : da
+10:58:52	 From  Bianca Lixandru : da
+10:58:55	 From  Rusen Razvan : Da
+10:59:11	 From  Francu Denisa : da, putem
+10:59:14	 From  Gabriela Burtan : Merge, am pus
+10:59:15	 From  Robert-Adrian Bucur : Putem sa ne punem prezenta, multumim
+10:59:44	 From  Bogdan Kocsis : O intrebare. Cand este deadline-ul pentru lab 3 ?
+10:59:46	 From  Clarissa Junc : cand e deadline-ul pentru tema cap3?
+11:00:15	 From  Robert-Adrian Bucur : Duminica
+11:02:28	 From  Teo Mohaiu : nu
+11:02:29	 From  Adina Pepene : Da
+11:02:30	 From  ANDREI : da
+11:02:30	 From  Florin : da
+11:02:31	 From  AAgyo : Da
+11:02:32	 From  Gabriela Burtan : da
+11:02:34	 From  Teodor Mihaescu : Un medicament fals
+11:02:35	 From  Teodor Mihaescu : =))
+11:08:12	 From  Vancsa Alecsandru : logic logic
+11:08:20	 From  Vancsa Alecsandru : :))
+11:13:05	 From  Bianca Lixandru : da
+11:13:07	 From  George Reculin : da
+11:16:23	 From  Vancsa Alecsandru : oke
+11:16:27	 From  George Reculin : da
+11:16:28	 From  Vancsa Alecsandru : e oke
+11:16:32	 From  Rusen Razvan : Da
+11:16:37	 From  Bianca Lixandru : puteti sa mai explicate o data formula va rog?
+11:17:54	 From  Bianca Lixandru : cea despre care spuneati acum cu intervalul de confidenta
+11:18:04	 From  Bianca Lixandru : da
+11:19:18	 From  Bianca Lixandru : cred ca am inteles acum
+11:19:34	 From  Bianca Lixandru : multumesc!
+11:26:37	 From  Gabriela Burtan : e ok
+11:44:07	 From  David Pope1.4 : e ok
+11:44:09	 From  George Reculin : e ok
+11:53:21	 From  Gabriela Burtan : Multumim!
+11:53:24	 From  Bianca Lixandru : Multumim frumos!
+11:53:30	 From  Rusen Razvan : Ok,multumim
+11:53:45	 From  David Pope1.4 : zi buna multumim
+11:53:52	 From  Adi Manghiuc : Multumim
+11:58:36	 From  Teodor Mihaescu : O intrebare scurta: La exercitiul 20 de la ultima tema se cerea sa ne folosim de o distributie de medie 10 si dispersie 2. Cum putem sa gasim o astfel de distributie? Si, in general, cum putem "fabrica" distributii cu atribute dorite?
+12:24:03	 From  Honorius Galmeanu : Scuze, am venit
+12:24:51	 From  Honorius Galmeanu : Stai sa-ti arat
+12:43:04	 From  Honorius Galmeanu : Hm.. ceva gresesc, ambele curbe trebuie sa iasa la fel..
+12:51:31	 From  Honorius Galmeanu : Problema 20 din cap 2?
+12:51:39	 From  Honorius Galmeanu : sau din cap 3?
+13:04:02	 From  Honorius Galmeanu : Bun, pentru problema 20 de la cap 2, "Pentru o distribuţie normală de medie 10 şi dispersie 2":
+13:04:21	 From  Honorius Galmeanu : deviatia standard este sqrt(2)
+13:04:55	 From  Honorius Galmeanu : numere din distributia normala standard se extrag cu functia np.random.randn()
+13:05:13	 From  Honorius Galmeanu : dar pentru medie si dispersie date:
+13:05:21	 From  Honorius Galmeanu : x = np.random.randn(1000) * np.sqrt(2) + 10
+print(x.mean(), x.var())
+13:05:29	 From  Honorius Galmeanu : (exemplu pentru 1000 de valori)
+13:07:02	 From  Bianca Lixandru : As avea si eu o intrebare  legata de problema 37 din cap 3
+13:09:28	 From  Bianca Lixandru : Pentru rezolvare am ales sumele obtinute adica de la 0 la 10 maxim. si pentru count am ales valori de la 0 la 10 pt ca pot avea 0 1 2 3 … maxim 10 succese
+13:10:14	 From  Bianca Lixandru : Problema e atunci cand vreau sa fac functia de cumulate
+13:10:45	 From  Bianca Lixandru : pentru ca imi rezulta mai mult de 50 de valori 
+13:11:08	 From  Bianca Lixandru : ceea ce este evident pt ca am un for in for
+13:11:22	 From  Bianca Lixandru : si eu am 11*11 valori
+13:11:53	 From  Bianca Lixandru : Totusi nu reusesc sa imi dau seama unde gresesc
+13:20:05	 From  Honorius Galmeanu : Deci sumele sunt de la 0 la 10
+13:20:40	 From  Bianca Lixandru : da
+13:20:43	 From  Honorius Galmeanu : acum, pentru fiecare suma intre 0 si 10, trebuie sa numeri de cate ori poate ea sa apara
+13:20:54	 From  Honorius Galmeanu : de exemplu, suma 0 poate sa apara o singura data
+13:20:59	 From  Honorius Galmeanu : la fel si suma 11
+13:21:24	 From  Honorius Galmeanu : (10 am vrut sa zic)
+13:21:38	 From  Bianca Lixandru : pai si nu e asa pt toate sumele?
+13:21:45	 From  Honorius Galmeanu : Suma 1, la fel ca si suma 9, pot sa apara de 10 ori
+13:21:53	 From  Bianca Lixandru : ca avem o singura moneda
+13:21:56	 From  Honorius Galmeanu : suma 2, de cate ori poate sa apara?
+13:22:11	 From  Bianca Lixandru : de ce de 10 ori asta incerc sa inteleg
+13:23:01	 From  Bianca Lixandru : suma 2 poate aparea de 9 ori?
+13:23:03	 From  Honorius Galmeanu : pai hai sa luam un set de pozitii de la 1 la 10 (sloturi) si o singura bila
+13:23:11	 From  Honorius Galmeanu : poti avea:
+13:23:30	 From  Honorius Galmeanu : (* 0 0 0 0  0 0 0 0 0 ) - bila e pe prima pozitie
+13:23:35	 From  Bianca Lixandru : da
+13:23:50	 From  Honorius Galmeanu : urmatoarea varianta e (0 *  0 0 0 0 0 0 0 0 )
+13:24:07	 From  Honorius Galmeanu : si asa mai departe pana la a 10-a varianta : (0 0 0 0 0 0 0 0 0 *)
+13:24:14	 From  Honorius Galmeanu : ok pana aici?
+13:24:17	 From  Bianca Lixandru : da
+13:24:29	 From  Honorius Galmeanu : bun, acum ai 2 bile:
+13:24:44	 From  Honorius Galmeanu : prima posibilitate: (* * 0 0 0 0 0 0 0 0 )
+13:24:55	 From  Honorius Galmeanu : a doua: (* 0 * 0 0 0 0 0 0 0 )
+13:25:10	 From  Honorius Galmeanu : .. a 9-a: (* 0 0 0 0 0 0 0 0 * )
+13:25:25	 From  Honorius Galmeanu : a 10-a (0 * * 0 0 0 0 0 0 0 )
+13:25:29	 From  Bianca Lixandru : aaa si avem 9*8 posibilitati
+13:25:31	 From  Bianca Lixandru : ?
+13:25:42	 From  Honorius Galmeanu : (0 *  0 0 0 0 0 0 0 * )
+13:25:43	 From  Bianca Lixandru : de fapt unele o sa se repete
+13:26:15	 From  Honorius Galmeanu : atentie, nu o sa se reoete
+13:26:22	 From  Honorius Galmeanu : ajungem la:
+13:27:02	 From  Honorius Galmeanu : (0 0 * * 0  0 0 0 0 0 ), apoi la (0 0 * 0  0 0 0 0 * )
+13:27:16	 From  Honorius Galmeanu : si continuam: (0 0 0 * *  0 0 0 0 0 )
+13:27:34	 From  Honorius Galmeanu : sunt combinatii de 10 elemente luate cate 2
+13:27:56	 From  Honorius Galmeanu : (nu aranjamente, daca s-ar fi repetat, pentru ca nu se repeta)
+13:28:18	 From  Honorius Galmeanu : intelegi?
+13:28:56	 From  Bianca Lixandru : Daa eu acum le-am desenat pe foaie
+13:29:00	 From  Bianca Lixandru : si le-am numarat
+13:29:03	 From  Honorius Galmeanu : bun
+13:29:07	 From  Bianca Lixandru : si imi da acelasi rezultat
+13:29:21	 From  Bianca Lixandru : precum combinari de 10 luate cate 2
+13:29:24	 From  Bianca Lixandru : adica 25
+13:29:35	 From  Bianca Lixandru : Dar acum am inteles cum trebuie sa gandesc alegerile 
+13:29:39	 From  Honorius Galmeanu : daca sunt doua, trebuie sa-ti dea 45
+13:29:45	 From  Bianca Lixandru : 45*
+13:29:53	 From  Bianca Lixandru : imi cer scuze am scris gresit
+13:30:04	 From  Bianca Lixandru : eu le-am gandit ca 9+8+7+..+1
+13:30:05	 From  Honorius Galmeanu : aha. ok
+13:30:29	 From  Honorius Galmeanu : daca ai doua, merge sa le socotesti cu 2 for-uri
+13:30:29	 From  Bianca Lixandru : Chiar am inteles acum! Va multumesc frumos!
+13:30:39	 From  Honorius Galmeanu : dar daca ai 3, iti trebuie 3 for-uri..
+13:30:59	 From  Honorius Galmeanu : si tot asa :( - nu prea merge sa le numeri folosind for-uri
+13:31:01	 From  Bianca Lixandru : Aha
+13:31:23	 From  Bianca Lixandru : Asa e
+13:31:39	 From  Bianca Lixandru : Trebuie sa ma gandesc la o alta varianta
+13:32:12	 From  Honorius Galmeanu : pai foloseste formula combinarilor pentru numarat - ce sens are sa faci 3 for-uri unul in altul doar ca sa aduni niste valori de 1?
+13:32:32	 From  Bianca Lixandru : Asta voiam sa incerc acum dar nu eram sigura daca merge
+13:33:00	 From  Bianca Lixandru : ma uitam la exemplul cu zarurile 
+13:33:02	 From  Honorius Galmeanu : poti spre exemplu sa faci un vector de maxim 10 elemente unde sa tii indicii aia ai for-urilor, si pe urma sa-i incrementezi de la cel mai inauntru spre cel de dinafara, dar e laborios
+13:33:36	 From  Honorius Galmeanu : pentru ca o sa ai un numar variabil de indici de for-uri, intre 1 si 9
+13:33:49	 From  Honorius Galmeanu : eventual ii reduci la jumatate daca tii seama de simetrie
+13:33:54	 From  Bianca Lixandru : o sa incerc acum sa fac un vector de 11 elemente si sa pun rezultatele combinarilor pe pozitii
+13:33:55	 From  Honorius Galmeanu : dar e complicat :)
+13:38:39	 From  Rusen Razvan : Am si eu o nelamurire,in legatura cu Q8 de la cap3,am incercat sa urmez exemplul de la curs,cel cu tatal si fetele,iar dupa acel model am incercat sa realizez si eu cu functia binom,care la mine arata asa binom(1, 2)*.5**2+binom(3,5)*.8**2,insa nu imi dau seama de ce nu ar fi bine raspunsul.
+13:40:27	 From  Honorius Galmeanu : Pai tu dai cu moneda de 5 ori
+13:40:55	 From  Honorius Galmeanu : si te intereseaza sa insumezi probabilitatile pentru 3 heads, 4 heads si 5 heads
+13:41:56	 From  Honorius Galmeanu : calculeaza inai probabilitatea sa iasa 3 heads din 5 aruncari - cu functia binom, si mai pui ceva pe langa ea
+13:42:06	 From  Rusen Razvan : aa,deci ar trebui sa am 3 functii binom insumate
+13:42:10	 From  Honorius Galmeanu : exact
+13:42:35	 From  Rusen Razvan : Ok,multumesc frumos
+13:42:40	 From  Honorius Galmeanu : cu pla
