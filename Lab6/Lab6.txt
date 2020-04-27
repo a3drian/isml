@@ -1,0 +1,90 @@
+ISML - Lab6
+
+-type I error = reject null hypothesis when null hypothesis is true
+-type II error = accept null hypothesis when null hypothesis is false
+-probabilitatea de a accepta type II error = beta
+
+False Discovery Rates
+-used to identify bad data that looks good
+-95% of the time the samples will overlap => p-value > 0.05
+-5% they don't => p-value < 0.05 => false positive
+-if the p-value is large it is expected because the samples are taken from the same distribution
+-Benjamini-Hoghberg:
+.e o probabilitate egala ca un p-value sa cada intr-unul din bin-urile din histograma de 10000 de sample-uri, pentru ca sample-urile de test au fost luate din aceeasi distributie
+.false negatives pot fi reduse daca crestem sample size
+.linia rosie punctata = 450 p-values sunt in fiecare bin
+.check pictures from Lab6
+
+------------------------------------------------------------------------------------------------------------------------
+Q1.
+-power = probabilitatea de a rejecta ipoteza nula atunci cand ea este false, adica atunci cand nu facem nici type I nici type II error
+
+Q2.
+-p9/statinf5.pdf
+
+Q3.
+-p9/statinf5.pdf
+
+Q4.
+-p19/statinf5.pdf
+
+Q5. (1)
+-p7/statinf5.pdf
+-p8/statinf5.pdf
+-pentru alpha = 5%, cum scria in enunt, am scris in cod alpha = 0.05
+-ea a folosit aici:
+print(statsmodels.stats.power.normal_power(effect_size=(11 - 10)/4,
+										   nobs=100, alpha=0.05,
+										   alternative='larger')) (ca la Q5 (2))
+
+Q5. (2)
+-p22/statinf5.pdf
+-se foloseste ca parametru pentru power valori de la 0 la 1, deci daca vrem power 80% atunci punem 0.8 ca parametru
+-cand zice pentru un test 5% se refera ca alpha = 5%, dar in cod scriem alpha = 0.05
+-am luat mu_0 = 0, pentru ca ipoteza nula presupunea ca nu se pierde deloc volum
+-pentru effect_size asa e formula
+-formula folosita de mine e echivalenta cu aia de la Q5. (1)
+-ea a presupus mu_0 = 0.01 si ca sa afle mu_a, a adunat deviatia standard de 0.04 => mu_a = 0.05
+-era gresit cum a presupus ea pentru ca in enunt ti se da media aia pe 4 ani ca fiind 0.01 => mu_a - mu_0 trebuie sa dea 0.01
+-am folosit direct mu ca fiind mu_a - mu_0 si atunci am pus direct mu/sigma, nu am mai facut nicio scadere
+
+Q6.
+-corectia se foloseste pentru a elimina aparitia false-positives
+-factorii relevanti statistic sunt aia care au p-values < 0.05
+-rezultatul aplicarii corectiei era un tuple care la pozitia 0 era un vector de bool si la pozitia 1 era un vector cu toate valorile mai mici decat pragul
+-puteai folosi acel vector de pe pozitia 1 ca sa determini care erau categoriile din dietary variables care aveau pragul mai mic decat 0.05
+-dadea 1 daca lasam categoria 'Total categories' ca era un numar foarte mic, 0.001
+-de ce np.sum() da 1 dar totusi sunt 4 categorii care sunt relevante statistic (?)
+.puneam pValues[1] in np.sum() care era un numar 0.039, in loc sa pun pValues fara indice si asa compara tot vectorul pValues
+.asta cu indicele se aplica doar la bonf si hoch pentru ca acolo iti returneaza un tuplu
+-graficul era intr-o celula din laborator
+
+Q7.
+-p48/statinf5.pdf
+-recomand totusi video cu bootstrapping de la StatQuest!
+
+Q8.
+-exemplu 1:
+Testele resampling: Calculeaza procentajul unei simulari pentru care statistica sample-lui simulat a fost mai extrema (catre ipoteza alternativa), fata de cea observata
+Ipoteza nula: Distributiile observatiilor din fiecare grup sunt identice
+Ipoteza alternativa: Distributiile observatiilor sunt diferite
+P-value: Valoarea pentru fiecare variabila independenta care testeaza ipoteza nula.
+-exemplu 2:
+Resampling = Extragi un subsample din sample, îi faci o copie, reintroduci subsample-ul în sample-ul inițial, faci shuffle și o iei de la început.
+Ipoteza nulă = nu se observă diferențe
+Ipoteza alternativă = se observă diferențe
+P-value este probabilitatea, dacă 𝐻0
+e adevărată, de a obține T test statistic la fel de extremă sau mai extremă decât cea obținută dacă P-value este mică, atunci fie 𝐻0 este adevărată și am observat un eveniment rar sau 𝐻0 este falsă.
+-exemplu 3:
+Testele de resampling încearcă să determine distribuția mediilor unei populații atunci când nu cunoaștem distribuția populației. Ipoteză nulă este că distribuția mediilor resampled este egală cu distribuția mediilor a populației originale (opus pentru ipoteza alternativă). P-value este power între cele două distribuții.
+
+Q9.
+-ultima celula e de la el
+-celula cu seaborn e de la el
+-imi dadea diferit pentru ca se extrageau numere aleatorii dintr-o distributie normala
+-exemplu 1:
+Ipoteza nulă este că nu se întâmplă nimic dacă schimb etichetele (diferența dintre medii nu este semnificativă față de altă etichetare)
+Ipoteza alternativă este că cele 2 etichete sunt relevante (diferența de medii față de situația inițială e foarte extremă, foarte diferită)
+-p54/statinf5.pdf
+-linia neagra punctata in sus este observedStat
+-se poate observa si pe grafic ca df_10 se plimba de la -3 la 3 si df_2 incepe de la 3, deci numerele nu sunt extrase din aceeasi distributie
