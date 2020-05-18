@@ -1,0 +1,83 @@
+ISML - Lab7
+
+-
+
+------------------------------------------------------------------------------------------------------------------------
+Q1.
+-p6/statinf6.pdf
+-se foloseste least squares method
+-Yi = valorile inaltimilor fiilor, la noi in exemplu sunt niste numere random dintr-un set de date
+-e folosita formula
+
+Q2.
+-(?)
+-formula gasita pe net
+-ea a scris asa: mu = (1 / np.sum(w)) * np.sum(w * s)
+-bogdi a scris: mu = np.sum(s * w) / np.sum(w)
+
+Q3.
+-a)
+-ne intereaseaza diagonala secundara
+-formula pentru corrcoef e undeva folosita si intr-o celula din laborator
+-formula e si la p25/statinf6.pdf
+-corelatia se mai noteaza si cu rho
+-b) se cere centrarea variabilelor
+-formula pentru centrare si scalarea datelor e la p12/statinf6.pdf
+-centrarea se face prin Z = fheight - fheight_mean
+-mu pentru Z = media valorii fheight - fheight_mean
+-variabilele centrate trebuie sa aiba media 0 (media fiind mu de fapt)
+-se face face round din medie, si nu din Z; deci se face round(mu), care e np.mean(Z)
+-c) se cere centrarea pentru deviatia standard
+-se imparte mai intai inaltimea tatilor la deviatia standard a inaltimii tatilor
+-se face np.std(rezultatul impartirii de mai sus)
+-d) se cere procedura completa de normalizare (centrare si scalare)
+-am folosit formula pentru sigma = variance = dispersia
+-(?) de ce nu da 1.0 (pentru ca in formula am uitat sa pun np.sqrt(din variance, dispersie))
+-also, right se facea din s_std si f_std, unde s_std = np.std(sheight / sh_std)
+
+Q4.
+-deviatia standard a variabilei prezie este dubla fata de deviatia standard a predictorului sau => y = 2*x
+-exemplu cu intercept este intr-o celula din laborator, cauta 'intercept'
+-noua ni s-a dat corelatia, nu a trebuit sa o mai calculam noi cum era in celula respectiva
+-variablia prezisa = y
+-predictor = x
+
+Q5.
+-e examplu in aceeasi celula ca in Q4.
+-de data asta se da media pentru prezis si pentru predictor, nu mai trebuie sa o calculam
+-am scris niste formule in foaia (1) si intr-un alt notebook
+
+Q6.
+-in aceeasi celula ca la Q4. avem formula pentru y
+-formula e scrisa la p20/statinf6.pdf
+-mai e o formula pentru beta1 cu corelatia(X,Y) si std pentru X,Y la p23/statinf6.pdf
+
+Q7.
+-a)
+-media si deviatia standard se face ca la father_son
+-b)
+-a treia celula din laborator
+-Y in functie de X inseamna un scatter.plot(X, Y)
+-densitatile de probabilitati sunt graficele de langa scatter plot
+-c) se cere coeficientul de corelatie intre cele 2 seturi
+-coeficientul se mai noteaza cu rho
+-d)
+-coeficientul de corelatie da 0 doar daca cele 2 seturi de valori nu prezinta corelatii liniare, la p14/statinf6.pdf
+-daca rho = -1 inseamna ca dreapta descrisa de X si Y e cu panta negativa
+-daca rho = 1 inseamna ca dreapta descrisa de X si Y e cu panta pozitiva
+-panta pozitiva = dreapta sus, stanga jos
+-panta negativa = stanga sus, dreapta jos
+-practic daca nu se poate trage o linie intre puncte => nu avem corelatie liniara
+-eu am desenat un triunghi => iti trebuie cel putin 2 drepte ca sa unesti punctele
+-rho = 0 mai inseamna ca pentu fiecare crestere nu exista o crestere negativa sau pozitiva; cele 2 nu au legatura intre ele
+-f)
+-se poate folosi direct formula dintr-o celula din laborator sau se poate nota rho = np.corrcoef(X,Y)[0,1]
+-beta1 = slope
+-beta0 = intercept
+-coefficient pentru OLS = beta1 = slope, tine minte ca e params[1], si params[0] = intercept
+-pentru incadrare de grafic: x1 = np.linspace(np.min(x), np.max(x), 50)
+
+Q8.
+-nu am mai avut nevoie de:
+x1 = np.linspace(np.min(X_mtcars), np.max(X_mtcars), 100).. ci doar de y = beta1 * X + beta0
+-puneam in plot(x1, y1, lw=4) in loc de X si de aia nu dadea nici formula pentru RMS

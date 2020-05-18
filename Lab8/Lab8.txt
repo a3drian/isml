@@ -1,0 +1,77 @@
+ISML - Lab8
+
+-
+
+------------------------------------------------------------------------------------------------------------------------
+Q1.
+-dupa ce potrivesti o regresie liniara cu OLS, poti sa determini p-value pentru panta regresiei si pentru intercept-ul regresiei
+-se foloseste lm.pvalues[1] pentru panta; a se observa indicele 1 corespunzator pantei
+-se foloseste lm.pvalues[0] pentru intercept; a se observa indicele 0 corespunzator intercept
+-centrarea se face scazand X.mean() din X
+-dupa centrare se reface regresia liniara cu noul X ca predictor
+-se scoate noul intrecept
+-(?) interpretarea intercept-ului (la p5/statinf7.pdf)
+-intercept-ul ia valoarea lui y cand x este egal cu 0
+
+Q2.
+-daca ti se da intaltimea tatalui, o poti trata ca pe un predictor, adica ca pe un x
+-poti folosi formula sa afli y = beta0 + beta1 * x (x = inaltimea tatalui)
+-putem folosi lm.resid ca sa primim reziduurile dupa ce am am dat fit cu o regresie liniara
+-in ultima celula din laborator e partea cu t quantile si cu intervalele de confidenta
+-pentu ci se foloseste asta..
+pi = t * sigma * np.sqrt(1 + 1/n + (x1-np.mean(x))**2 / np.sum((x-np.mean(x))**2))
+..doar ca in loc de x1 punem inaltimea tatalui care s-a dat in cerinta ca fiind 80
+-atentie ca sunt 2 tipuri de intervale de confidenta, unul pentru dreapta si unul pentru predictie
+-acum am avut nevoie de ala pentru predictie
+-ca sa construim intervalul de confidenta adunam acel pi la y_fheight pentru capatul din dreapta si scadem acel pi din y_fheight pentru capatul din stanga
+
+Q3.
+-a)
+-pentru centrare, am scazut iar np.mean(X) din X si am refacut fit cu regresia
+-cum interpretam (?)
+-b)
+-pentru dreapta de regresie e cod intr-o celula din laborator
+-nu dadea dreapta de regresie calumea pentru ca nu erau beta0 si beta1 calculate corect, le lua dintr-o alta celula in care am facut fit cu o regresie liniara
+-c)
+-am facut exact ca la exercitiul precedent (Q1)
+-d) scatter plot pentru reziduu
+-e intr-o celula din laborator
+-la d) se cere variance pentru reziduuri, nu se cere Y_mpg - yf (yf = beta0 + beta1 * X_hp)
+-daca vrem din model direct facem cu lm.scale (ne da variance/sigma/dispersia)
+-am folosit formula de la Q2. care e si in laborator, doar ca de data asta nu am mai facut np.sqrt(sigma)
+-am facut asta ca sa imi dea la fel cu lm.scale
+-atentie ca n trebuie sa fie egal cu len(lm.resid) (n = len(lm.resid))
+-e) se cere R-squared
+-R squared este procentul de variabilitate totala care este explicat de regresie 
+-(variabilitatea totala = variabilitatea reziduala + variabilitatea regresiei)
+-cu cât R squared e mai mare, cu atât modelul de regresie se potriveste prezicerii
+-am pus si un link pe F_ISML
+
+Q4.
+-a)
+-am copiat exact din laborator din celula de sub 'Constructia statisticilor...'
+-sigma trebuie calculat pentru i_beta0 si i_beta1
+-b)
+-imi rezulta pentru ci un array pentru ca nu scadeam X_mean din X_expected, il scadeam din x1
+-x1 nu ne trebuie la interval de confidenta pentru linia de regresie intr-un punct dat (ci)
+-c)
+-x1 nu ne trebuie la interval de confidenta pentru predictie intre-un punct dat (pi)
+-in schimb diferenta dintre b) si c) este ca media s-a facut pe X mare, nu pe X_expected
+-d)
+-aici n se calculeaza ca fiind = len(lm.resid)
+-am luat direct dintr-o celula din laborator
+-atentie ca...
+x1 = np.linspace(np.min(X), np.max(X), 100)
+y1 = beta0 + beta1 * x1
+...x1 trebuie sa se potriveasca
+
+Q5.
+-exact acelasi lucru ca la Q5.
+-am avut o mica eroare in celula cu #reload variables, faceam din fii nu din mpg/hp
+
+Q6.
+-generarea datelor e in exemplu intr-o celula din laborator
+-d)
+-nu se afisa colorarea cu verde pentru ca sigma era calculat pe lm_h.resid, dar trebuia calculat pe lm.resid, adica pe prima regresie liniara
+-pana la urma am calculat sigma cu lm_resid, fara sa il trimit ca parametru
+-la p17/statinf7.pdf este un plot asemanator cu ultimul scatter plot
