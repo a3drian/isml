@@ -74,4 +74,6 @@ Q6.
 -d)
 -nu se afisa colorarea cu verde pentru ca sigma era calculat pe lm_h.resid, dar trebuia calculat pe lm.resid, adica pe prima regresie liniara
 -pana la urma am calculat sigma cu lm_resid, fara sa il trimit ca parametru
+-la p15/statinf7.pdf explica plot-ul fara heteroscedasticity
+-la p17/statinf7.pdf explica plot-ul cu heteroscedasticity
 -la p17/statinf7.pdf este un plot asemanator cu ultimul scatter plot

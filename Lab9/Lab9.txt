@@ -1,10 +1,62 @@
 ISML - Lab9
 
--
+-la p10/statinf8.pdf este scris ceva interesant legat de predictorul Agriculture:
+.predictorul Agriculture este exprimat in procente
+.coeficientul sau este estimat la -0.1721
+.asta inseamna ca fertilitatea scade cu 17% pentru fiecare crestere de 1% in procentul de barbati angajati in agricultura
+.(?) de ce zice de procentul de barbati angajati in agricultura?
 
 ------------------------------------------------------------------------------------------------------------------------
 Q1.
--
+-lm = smf.ols(formula='Fertility ~ Agriculture + Education', data=swiss).fit() (1)
+-linia de mai sus inseamna ca potriveste Fertility in functie de Agriculture si Education
+-print(lm.params) = pentru a printa parametrii modelului de regresie
+-lm.summary() = ca sa ne printeze tabelul cu 'OLS Regression Results'
+-swiss['residAgriculture'] = lm_x1.resid = valoarea reziduala pentru 'Agriculture' va fi pusa intr-un Pandas Data Frame
+-o punem intr-un Pandas Data Frame ca mai apoi sa o putem folosi in felul in care am folosit 'Fertility', 'Agriculture' si 'Education' mai sus (prima linie (1))
+-'Fertility', 'Agriculture' si 'Education' sunt toate coloane intr-un Pandas Data Frame
+-se scoate valoarea reziduala pentru y, pentru variabila prezisa, nu pentru x (variabila predictor)
+-acelasi lucru il facem si pentru 'residFertility'
+-scadem Education - Agriculture si ne da un coeficient al unei regresii liniare
+-la p27/statinf8.pdf e vorba de scaderea intercept-ului si scaderea -1
+-cand X e continuu si dam remove la intercept (nu se face niciodata asta), inseamna ca intercept nu il mai prezicem din setul de date, ci il setam la 0 = practic inseamna ca scoti bias-ul si fortezi linia de regresie sa treaca prin 0 ceea ce inseamna ca poate nu va face fit corect pe setul de date
+-(?)
 
 Q2.
--
+-a) se cere pair plot pentru 'cyl'
+-e un exemplu in laborator cu sns.pairplot
+-kind='reg' = regular plot si nu scatter plot
+-mtcars['cyl'] da rezultate diferite fata da mtcars['cyl'].values
+-(?) eroare cu rosu
+-b) calculul coeficientilor de regresie
+-trebuie sa luam toate celelalte coloane fata de 'cyl', adica cyl sa fie inainte de ~
+-imi zicea ca nu gasea coeficientii de regresie pentu ca faceam fit pe swiss si nu pe mtcars
+-coloanele din mtcars.csv:
+# mpg	Miles/(US) gallon
+# cyl	Number of cylinders
+# disp	Displacement (cu.in.)
+# hp	Gross horsepower
+# drat	Rear axle ratio
+# wt	Weight (1000 lbs)
+# qsec	1/4 mile time
+# vs	Engine (0 = V-shaped, 1 = straight)
+# am	Transmission (0 = automatic, 1 = manual)
+# gear	Number of forward gears
+# carb	Number of carburetors
+-la c) am facut un lm cu 'mpg ~ hp' pentru ca aveam nevoie de beta0 si beta1 sa le scot din lm.params[0] si [1]
+-la d) zice in functie si de 'cyl' => facem 'mpg ~ cyl + hp' sa includem mpg si in functie de cyl
+-ax.scatter(hp, mpg, c=c) = c ne da culoarea punctelor
+-e un exemplu in laborator
+-e)
+-formula se schimba si in loc de + avem * => 'mpg ~ hp * C(cyl)'
+-* inseamna ca se considera regresorul de tip interactiune dintre cele doua variabile
+-practic inseamna ca cele 2 coloane intre care se pune steluta s-au inmultit
+-C vine de la faptul ca este o categorie => cylinders e 4, 6, 8, nu e valoare continua cum e hp sau mpg
+-am facut pana la urma (lm.params[2] * lm.params[3]) * x 
+-am inmultit cu x pentru ca altfel dadea o singura linie in grafic
+-daca nu inmultim cu 4, 6, 8, atunci obtinem o singura linie (evident), dar asta ne permite si sa le coloram diferit
+-e la p39/statinf.pdf
+-p22/statinf.pdf, ceva cu Xi1 si Xi2
+
+2e) e incorect, dar e in ReLive cum se face
+-nu mi-a dat al doilea grafic ca al lui dar rezultatele din OLS sunt la fel
